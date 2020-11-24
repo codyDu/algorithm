@@ -1,8 +1,11 @@
 package com.company;
 
+import com.sun.tools.classfile.Opcode;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
@@ -330,6 +333,36 @@ public class Main {
 
 
 
+//分隔链表 -----------------------------------------------------------------------------------------------------------------------------------------------------
+    public ListNode partition(ListNode head, int x) {
+
+
+    }
+
+//  82  https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
+//    给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
+
+    public ListNode deleteDuplicates(ListNode head) {
+
+
+        ListNode dumy = new ListNode(0);
+        dumy.next = head;
+        ListNode curr = head;
+        while (curr.next != null && curr.next.next != null) {
+            if (curr.next.val == curr.next.next.val) {
+                ListNode temp = curr.next;
+                while (temp != null && temp.next != null && temp.val == temp.next.val ) {
+                    temp = temp.next;
+                }
+                curr.next = temp.next;
+
+
+            }else {
+                curr = curr.next;
+            }
+        }
+        return dumy.next;
+    }
 
 
 }
