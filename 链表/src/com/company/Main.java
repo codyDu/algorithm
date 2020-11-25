@@ -336,6 +336,7 @@ public class Main {
 //分隔链表 -----------------------------------------------------------------------------------------------------------------------------------------------------
     public ListNode partition(ListNode head, int x) {
 
+        return  null;
 
     }
 
@@ -363,6 +364,8 @@ public class Main {
         }
         return dumy.next;
     }
+
+
 
 
 }
