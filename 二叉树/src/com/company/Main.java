@@ -71,4 +71,18 @@ public class Main {
 
     }
 
+
+
+
+
+//    二叉树的中序遍历
+public List<Integer> inorderTraversal(TreeNode root) {
+    if (root == null) return res;
+    preorderTraversal(root.left);
+    res.add(root.val);
+    preorderTraversal(root.right);
+
+    return res;
+}
+
 }
