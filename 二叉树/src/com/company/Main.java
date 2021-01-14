@@ -85,4 +85,42 @@ public List<Integer> inorderTraversal(TreeNode root) {
     return res;
 }
 
+
+    public String reverseLeftWords(String s, int n) {
+        return s.substring(n,s.length()) + s.substring(0,n);
+
+    }
+
+
+//    请完成一个函数，输入一个二叉树，该函数输出它的镜像。
+//剑指 Offer 27. 二叉树的镜像
+    public TreeNode mirrorTree(TreeNode root) {
+
+        if (root == null) return null;
+        TreeNode left  = mirrorTree(root.right);
+         TreeNode right = mirrorTree(root.left);
+         root.left = left;
+         root.right = right;
+
+        return root;
+    }
+
+
+//    剑指 Offer 55 - I. 二叉树的深度
+    public int maxDepth(TreeNode root) {
+
+        if (root == null) return 0;
+
+        return Math.max(maxDepth(root.left) , maxDepth(root.right)) + 1;
+
+    }
+
+
+    public String replaceSpace(String s) {
+
+        return s.replace(" ","%");
+
+    }
+
+
 }
